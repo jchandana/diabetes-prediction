@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block body %}
+   
+<div class="row">
+<div class="col s3"></div>
+<div class="col s6">
+    <h3 text="center">Diabetes Predictor</h3>
+    <br>
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container" height="100%" width="100%">
+<form class="myform" action="/predict" method="POST">
+   
+  No.of times Pregnant:
+     <input name="P" type="number" placeholder="1"  min="0" max="10">  
+     Insulin:
+     <input name="IN" type="number" placeholder="0.0" step="0.01" min="0" max="100">
+     BMI:
+     <input name="BMI" type="number" placeholder="weight in kg/(height in m)^2" step="0.01" min="0" max="50" >
+     Age:
+     <input name="AGE" type="number" placeholder="Age" min="0">
+      Glucose:
+    <input name="Gl" type="number" placeholder="Eg: 80" step="0.01" min="0" max="400">
+    BP:
+    <input name="BP" type="number" placeholder="eg.100" min="50">
+    Pedigree:
+    <input name="SK" type="number" placeholder="0-1" step="0.001" min="0" max="1"> 
+    
+   
+    
+    
+    <button class="btn" type="submit">Predict</button>
+    
+    
+
+    
+     
+  </form>
+  </div>
+  </div>
+ 
+</div>
+  <div class="col s3"></div>
+
+</div>
+  {% endblock %}

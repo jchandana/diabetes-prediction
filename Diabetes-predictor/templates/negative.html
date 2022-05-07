@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row">
+   
+    <div class="col s6">
+{% if data:%}
+<h1 style="color:{{data[1]}}">
+  {{data[0]}}
+</h1>
+{% endif %}
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxPCNTbcHetlufS15GoCdWUSHSqO8idMn-yQ&usqp=CAU" alt="HOORAY" width=100% height=60%> 
+</div>
+<div class="col s6">
+    <img src="https://d35a0majfjch7v.cloudfront.net/wp-content/uploads/2018/08/How-to-Prevent-Diabetes-Tips.jpeg" alt="" height=60% width=100%>
+</div>
+{% endblock %}
